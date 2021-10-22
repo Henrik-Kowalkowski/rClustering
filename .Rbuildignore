@@ -1,6 +1,6 @@
-^r_clustering\.Rproj$
+^rClustering\.Rproj$
 ^\.Rproj\.user$
+^README\.Rmd$
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
-^README\.Rmd$

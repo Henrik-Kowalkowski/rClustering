@@ -3,3 +3,4 @@
 export(make_circle)
 export(make_cluster)
 export(make_clusters)
+importFrom(magrittr,"%>%")

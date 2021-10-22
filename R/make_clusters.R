@@ -47,6 +47,7 @@ make_cluster <- function(center, r, n_pts) {
 #' @param categorical A fractional value if provided. Determines how useful a categorical variable should be with 1 being the most useful.
 #' @param seed Random seed to use to make the results reproducible.
 #' @return Dataframe, a set of labeled 2-d clusters.
+#' @importFrom magrittr "%>%"
 #' @export
 make_clusters <- function(n_clust, centers = "random", c_range, radii = c(1, 5), density, categorical = FALSE, seed = NULL) {
   # Make random results reproducible

@@ -1,9 +1,9 @@
-Package: r_clustering
-Title: Create Blobs and Demostrate K-Type Clustering Methods
+Package: rClustering
+Title: An example package for basic clutering
 Version: 0.0.0.9000
 Authors@R: 
     person("Henrik", "Kowalkowski", , "henrikkowalkowski@gmail.com", role = c("aut", "cre"))
-Description: Create blobs and demonstrate K-type clustering methods.
+Description: Generate 2-d cluster data. Allow for categorical features. Synthetic data generation process. Illustrate K-Means and K-Prototypes clustering.
 License: `use_mit_license()`
 Encoding: UTF-8
 LazyData: true
@@ -15,5 +15,5 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
-URL: https://github.com/Henrik-Kowalkowski/r_clustering
-BugReports: https://github.com/Henrik-Kowalkowski/r_clustering/issues
+URL: https://github.com/Henrik-Kowalkowski/rClustering
+BugReports: https://github.com/Henrik-Kowalkowski/rClustering/issues
