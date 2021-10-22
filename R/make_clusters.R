@@ -29,6 +29,7 @@ make_cluster <- function(center, r, n_pts) {
   # A square point space
   x <- runif(n = n_pts, min = x - r, max = x + r)
   y <- runif(n = n_pts, min = y - r, max = y + r)
+  coords = data.frame(x=x, y=y)
 
   # Carve a circle from it
   mask <- make_circle(center, r, coords)
@@ -57,13 +58,13 @@ make_clusters <- function(n_clust, centers = "random", c_range, radii = c(1, 5),
   }
 
   # Set scale of cluster
-  radii <- runif(n_clut, radii[1], radii[2])
+  radii <- runif(n_clust, radii[1], radii[2])
 
   # Set cluster densities as a function of cluster size
   ## Beta distribution varies the density randomly to be extremely dense or not dense (U shape)
   densities <- radii * density * (rbeta(n_clust, shape1 = 0.5, shape2 = 0.5) + 0.1)
 
-  clusters <- mapply(make_cluster, centers, radii, densities, SIMPLIFY = FALSE) %>% bind_rows(.id = "y_true")
+  clusters <- mapply(make_cluster, centers, radii, densities, SIMPLIFY = FALSE) %>% dplyr::bind_rows(.id = "y_true")
 
   # Create a correlated categorical variable if appropriate
   if (categorical) {
