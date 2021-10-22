@@ -42,9 +42,6 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
-
 # translation temp files
 po/*~
 
@@ -54,5 +51,4 @@ po/*~
 
 # End of https://www.toptal.com/developers/gitignore/api/r
 .Rproj.user
-docs
 inst/doc
