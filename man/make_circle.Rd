@@ -2,7 +2,7 @@
 % Please edit documentation in R/make_clusters.R
 \name{make_circle}
 \alias{make_circle}
-\title{Add together two numbers}
+\title{Create a 2-d circular Boolean mask}
 \usage{
 make_circle(center, r, pts)
 }
@@ -11,11 +11,11 @@ make_circle(center, r, pts)
 
 \item{r}{Radius of the blob.}
 
-\item{pts}{Dataframe of cartesian point coordinates to draw from.}
+\item{pts}{Dataframe of Cartesian point coordinates to draw from.}
 }
 \value{
-Vector of points in the shape of a circle with radius r and center (x,y).
+Boolean mask when applied forms a circle from a point cloud.
 }
 \description{
-Add together two numbers
+Create a 2-d circular Boolean mask
 }
