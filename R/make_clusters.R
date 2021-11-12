@@ -55,7 +55,7 @@ make_clusters <- function(n_clust, centers = "random", c_range, radii = c(1, 5),
 
   # Generate random x and y for cluster center
   if (!is.list(centers)) {
-    centers <- lapply(1:n_clust, function(x) runif(2, -c_range, c_range))
+    centers <- lapply(1:n_clust, function(x) runif(2, c_range[1], c_range[2]))
   }
 
   # Set scale of cluster

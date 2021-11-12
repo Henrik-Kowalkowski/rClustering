@@ -27,7 +27,7 @@ library(kableExtra)
 
 ## Build the clusters
 ```{r}
-clusts <- make_clusters(4, c_range = 20, density = 500, categorical = F, seed = 1)
+clusts <- make_clusters(4, c_range = c(-20, 20), density = 500, categorical = F, seed = 1)
 clusts %>%
   sample_n(10) %>%
   kable() %>%
