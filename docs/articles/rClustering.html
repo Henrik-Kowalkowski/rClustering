@@ -97,7 +97,7 @@
 <h2 class="hasAnchor">
 <a href="#build-the-clusters" class="anchor"></a>Build the clusters</h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">clusts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/make_clusters.html">make_clusters</a></span><span class="op">(</span><span class="fl">4</span>, c_range <span class="op">=</span> <span class="fl">20</span>, density <span class="op">=</span> <span class="fl">500</span>, categorical <span class="op">=</span> <span class="cn">F</span>, seed <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
+<code class="sourceCode R"><span class="va">clusts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/make_clusters.html">make_clusters</a></span><span class="op">(</span><span class="fl">4</span>, c_range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">20</span>, <span class="fl">20</span><span class="op">)</span>, density <span class="op">=</span> <span class="fl">500</span>, categorical <span class="op">=</span> <span class="cn">F</span>, seed <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 <span class="va">clusts</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_n</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
