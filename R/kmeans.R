@@ -24,7 +24,7 @@ get_mean_clusters <- function(data, fit_name, n_clust, iter, n_start, seed = NUL
   km_data <- cbind(data, y_pred)
 
   # Create plot titles
-  km_data$title <- glue::glue("{fit_name}, nclust={n_clust}, n_iter={iter}, n_start={n_start}, time={t_time} secs")
+  km_data$title <- glue::glue("{fit_name}, n_clust={n_clust}, n_iter={iter}, n_start={n_start}, time={t_time} secs")
 
   km_data
 }
