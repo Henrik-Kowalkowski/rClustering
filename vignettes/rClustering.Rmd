@@ -78,3 +78,54 @@ p2 <- clusts %>% ggplot(aes(x = x, y = y, col = y_true)) +
 
 grid.arrange(p1, p2, ncol = 2)
 ```
+  
+Since the clusters are perfect circles we can extract the center by taking the mean and the edges by taking the min and max of the coordinates.
+
+## Fit Kmeans
+```{r}
+# Prepare clusters
+clusts <- make_clusters(4, c_range = c(-20, 20), density = 500, categorical = F, seed = 2)
+
+# Prepare arguments
+vals <- setNames(data.frame(expand.grid(c(5, 10, 20), c(1, 10, 20))), c("n_iter", "n_start"))
+vals$n_clust <- 4
+vals$fit_name <- rep(c("A", "B", "C"), 3)
+
+# Loop over argument combinations and fit Kmeans
+out <- mapply(get_mean_clusters,
+  fit_name = vals$fit_name,
+  n_clust = vals$n_clust,
+  iter = vals$n_iter,
+  n_start = vals$n_start,
+  MoreArgs = list(data = clusts, seed = 1),
+  SIMPLIFY = F
+) %>%
+  bind_rows() %>%
+  mutate(y_pred = factor(y_pred))
+```
+
+
+## Visualize fits
+```{r fig.height = 12, fig.width = 7}
+p1 <- ggplot(out, aes(x = x, y = y, col = y_true)) +
+  geom_point(size = 0.5) +
+  ggtitle("Ground Truth") +
+  theme(legend.position = "none")
+
+p2 <- ggplot(out, aes(x = x, y = y, col = y_pred)) +
+  geom_point(size = 0.5) +
+  facet_wrap(~title, labeller = labeller(title = label_wrap_gen(20)), ncol = 3) +
+  ggtitle("Kmeans", subtitle = "Varying Iterations and Starts") +
+  theme(legend.position = "none")
+
+grid.arrange(p1, p2,
+  widths = c(3, 4), heights = c(3, 9),
+  layout_matrix = rbind(
+    c(1, NA),
+    c(3, 3)
+  )
+)
+```
+  
+Note how important it is to use multiple starts so the model can converge. No amount of iterations will help if the starting point is very poor. Additionally, Kmeans is an unsupervised learning method. This means that it can find distinct clusters, but the clusters are not guaranteed to have the same label as the ground truth. The more iterations and starts specified the longer the fit takes.
+

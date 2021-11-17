@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Henrik", "Kowalkowski", , "henrikkowalkowski@gmail.com", role = c("aut", "cre"))
 Description: Generate 2-d cluster data. Allow for categorical features. Synthetic data generation process. Illustrate K-Means and K-Prototypes clustering.
-License: `use_mit_license()`
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

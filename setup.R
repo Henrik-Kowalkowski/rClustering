@@ -1,5 +1,6 @@
 # Build package
 usethis::create_package(path=here::here())
+usethis::use_mit_license(copyright_holder = NULL)
 
 # Create site
 usethis::use_readme_rmd()
