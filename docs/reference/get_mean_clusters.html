@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • rClustering</title>
+<title>Fit Kmeans on globs — get_mean_clusters • rClustering</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Fit Kmeans on globs — get_mean_clusters" />
+<meta property="og:description" content="Fit Kmeans on globs" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -111,60 +112,53 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Fit Kmeans on globs</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Henrik-Kowalkowski/rClustering/blob/master/R/kmeans.R'><code>R/kmeans.R</code></a></small>
+    <div class="hidden name"><code>get_mean_clusters.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Fit Kmeans on globs</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>get_mean_clusters</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>fit_name</span>, <span class='va'>n_clust</span>, <span class='va'>iter</span>, <span class='va'>n_start</span>, seed <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="get_mean_clusters.html">get_mean_clusters()</a></code> </p>
-        </td>
-        <td><p>Fit Kmeans on globs</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="make_circle.html">make_circle()</a></code> </p>
-        </td>
-        <td><p>Create a 2-d circular Boolean mask</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="make_cluster.html">make_cluster()</a></code> </p>
-        </td>
-        <td><p>Extract a circular cluster from a square point field</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="make_clusters.html">make_clusters()</a></code> </p>
-        </td>
-        <td><p>Make circular clusters</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>data</th>
+      <td><p>Dataframe of 2-d space to fit on.</p></td>
+    </tr>
+    <tr>
+      <th>fit_name</th>
+      <td><p>Name of kmeans fit</p></td>
+    </tr>
+    <tr>
+      <th>n_clust</th>
+      <td><p>An integer number of clusters to fit.</p></td>
+    </tr>
+    <tr>
+      <th>iter</th>
+      <td><p>An integer number of max iterations for the kmeans algorithm to converge to.</p></td>
+    </tr>
+    <tr>
+      <th>n_start</th>
+      <td><p>An integer number of max iterations for the kmeans algorithm to converge to</p></td>
+    </tr>
+    <tr>
+      <th>seed</th>
+      <td><p>Random seed to use to make the results reproducible.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Dataframe of covariates, predictions, and title of fit.</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
