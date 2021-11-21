@@ -1,3 +1,3 @@
-# rClustering 0.0.0.9000
+# rClustering 1.0
 
-* Added a `NEWS.md` file to track changes to the package.
+**2021-11-20: Published v1.0 of rClustering!** 🚀
