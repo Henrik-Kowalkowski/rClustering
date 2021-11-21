@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fit Kmeans on globs — get_mean_clusters • rClustering</title>
+<title>Fit Kprototypes on globs — get_proto_clusters • rClustering</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Fit Kmeans on globs — get_mean_clusters" />
-<meta property="og:description" content="Fit Kmeans on globs" />
+<meta property="og:title" content="Fit Kprototypes on globs — get_proto_clusters" />
+<meta property="og:description" content="Fit Kprototypes on globs" />
 
 
 
@@ -114,27 +114,27 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Fit Kmeans on globs</h1>
-    <small class="dont-index">Source: <a href='https://github.com/Henrik-Kowalkowski/rClustering/blob/master/R/kmeans.R'><code>R/kmeans.R</code></a></small>
-    <div class="hidden name"><code>get_mean_clusters.Rd</code></div>
+    <h1>Fit Kprototypes on globs</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Henrik-Kowalkowski/rClustering/blob/master/R/kprototypes.R'><code>R/kprototypes.R</code></a></small>
+    <div class="hidden name"><code>get_proto_clusters.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Fit Kmeans on globs</p>
+    <p>Fit Kprototypes on globs</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_mean_clusters</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>fit_name</span>, <span class='va'>n_clust</span>, <span class='va'>iter</span>, <span class='va'>n_start</span>, seed <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>get_proto_clusters</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>fit_name</span>, <span class='va'>n_clust</span>, <span class='va'>iter</span>, <span class='va'>n_start</span>, seed <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>data</th>
-      <td><p>Dataframe of 2-d space to fit on.</p></td>
+      <td><p>Dataframe of a 3-d space to fit on. Two continuous dimensions and one categorical dimension.</p></td>
     </tr>
     <tr>
       <th>fit_name</th>
-      <td><p>Name of kmeans fit</p></td>
+      <td><p>Name of kprototypes fit</p></td>
     </tr>
     <tr>
       <th>n_clust</th>
@@ -142,11 +142,11 @@
     </tr>
     <tr>
       <th>iter</th>
-      <td><p>An integer number of max iterations for the kmeans algorithm to converge to.</p></td>
+      <td><p>An integer number of max iterations for the kprototypes algorithm to converge to.</p></td>
     </tr>
     <tr>
       <th>n_start</th>
-      <td><p>An integer number of max iterations for the kmeans algorithm to converge to</p></td>
+      <td><p>An integer number of max iterations for the kprototypes algorithm to converge to</p></td>
     </tr>
     <tr>
       <th>seed</th>

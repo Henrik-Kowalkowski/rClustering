@@ -70,10 +70,10 @@ make_clusters <- function(n_clust, centers = "random", c_range, radii = c(1, 5),
   # Create a correlated categorical variable if appropriate
   if (categorical) {
     # The higher prob is the more correlated the categorical feature will be
-    clusters$cat_feature <- as.integer(clusters$y_true) * rbinom(nrow(n_clusters), size = 1, prob = categorical)
+    clusters$cat_feature <- as.integer(clusters$y_true) * rbinom(nrow(clusters), size = 1, prob = categorical)
 
     # Add noise to the cluster categorical feature based on the amount of 0s in the categorical feature
-    clusters$cat_feature[cluters$cat_feature == 0] <- sample(1:n_clust, sum(clusters$cat_feature == 0), replace = TRUE)
+    clusters$cat_feature[clusters$cat_feature == 0] <- sample(1:n_clust, sum(clusters$cat_feature == 0), replace = TRUE)
 
     # Convert the categorical feature to factor
     clusters$cat_feature <- factor(clusters$cat_feature)
