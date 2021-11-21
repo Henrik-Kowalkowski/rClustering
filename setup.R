@@ -2,6 +2,12 @@
 usethis::create_package(path=here::here())
 usethis::use_mit_license(copyright_holder = NULL)
 
+# Imports and depends
+usethis::use_package("clustMixType", type="imports")
+usethis::use_package("magrittr", type="imports")
+usethis::use_package("glue", type="imports")
+usethis::use_package("cluster", type="imports")
+
 # Create site
 usethis::use_readme_rmd()
 usethis::use_news_md()

@@ -1,6 +1,6 @@
 Package: rClustering
 Title: An example package for basic clutering
-Version: 0.0.0.9000
+Version: 1.0
 Authors@R: 
     person("Henrik", "Kowalkowski", , "henrikkowalkowski@gmail.com", role = c("aut", "cre"))
 Description: Generate 2-d cluster data. Allow for categorical features. Synthetic data generation process. Illustrate K-Means and K-Prototypes clustering.
@@ -9,9 +9,15 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Depends: 
+    R (>= 4.1.1)
+Imports: 
+    magrittr,
+    clustMixType,
+    glue
 Suggests: 
-    knitr,
-    rmarkdown,
+    knitr (>= 1.36),
+    rmarkdown (>= 2.11),
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
