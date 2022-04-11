@@ -9,7 +9,7 @@ clustering.
 
 ## Installation
 
-`install_github("hkowalkowski/rClustering")`
+`install_github("hkowalkowski/rClustering@v1.0")`
 
 ## Example
 
